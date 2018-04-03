@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const index = require("./routes/index");
 const employees = require("./routes/employees");
 
+
 const app = express();
 
 let port = 3000;
@@ -27,6 +28,7 @@ app.use(bodyParser.urlencoded({
 //routes
 app.use("/", index);
 app.use("/api", employees);
+
 
 app.listen(port, () => {
   console.log("SERVER Started on port "+port);
